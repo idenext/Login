@@ -24,6 +24,8 @@ class NetworkManager {
             SVProgressHUD.dismiss()
             if(response.response?.statusCode == 200){
                 completion(response.result.value as! Dictionary,nil)
+            }else if(response.response?.statusCode == 401){
+                completion(nil,"El usuario ó contraseña es incorrecto.")
             }else{
                 completion(nil,"Estamos presentando problemas en nuestro servicio, inténtelo de nuevo más tarde.")
             }

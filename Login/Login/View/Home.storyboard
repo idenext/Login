@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a8E-Ln-Jq8">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--HOME-->
+        <scene sceneID="kRh-Zu-tmW">
+            <objects>
+                <viewController id="a8E-Ln-Jq8" customClass="HomeViewController" customModule="Login" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ti1-rl-oEw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido a Bike Maps  Pierre Chamorro" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuW-i3-7fa">
+                                <rect key="frame" x="20" y="379.5" width="374" height="47"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.icloud.fill" translatesAutoresizingMaskIntoConstraints="NO" id="WIf-OW-JGI">
+                                <rect key="frame" x="127" y="219.5" width="160" height="160"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WIf-OW-JGI" secondAttribute="height" multiplier="1:1" id="UhE-C4-mS4"/>
+                                    <constraint firstAttribute="height" constant="160" id="mEN-QP-hDc"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p37-DQ-dxN">
+                                <rect key="frame" x="359" y="44" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="iOI-pU-9rk"/>
+                                    <constraint firstAttribute="width" secondItem="p37-DQ-dxN" secondAttribute="height" multiplier="1:1" id="mMM-IO-fN9"/>
+                                </constraints>
+                                <color key="tintColor" red="0.50196078431372548" green="0.71764705882352942" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" backgroundImage="ic_sign_off"/>
+                                <connections>
+                                    <action selector="signOff:" destination="a8E-Ln-Jq8" eventType="touchUpInside" id="hl3-HU-2L8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZuW-i3-7fa" firstAttribute="centerX" secondItem="KWc-df-2jG" secondAttribute="centerX" id="BqP-MB-yws"/>
+                            <constraint firstItem="ZuW-i3-7fa" firstAttribute="top" secondItem="WIf-OW-JGI" secondAttribute="bottom" id="Pgb-pa-GQX"/>
+                            <constraint firstItem="ZuW-i3-7fa" firstAttribute="centerY" secondItem="KWc-df-2jG" secondAttribute="centerY" constant="-50" id="UEB-0m-rO5"/>
+                            <constraint firstItem="WIf-OW-JGI" firstAttribute="centerX" secondItem="KWc-df-2jG" secondAttribute="centerX" id="Z8w-1w-xxz"/>
+                            <constraint firstItem="p37-DQ-dxN" firstAttribute="top" secondItem="KWc-df-2jG" secondAttribute="top" id="csd-LD-rcb"/>
+                            <constraint firstItem="ZuW-i3-7fa" firstAttribute="leading" secondItem="KWc-df-2jG" secondAttribute="leading" constant="20" id="dVY-0L-BXA"/>
+                            <constraint firstItem="KWc-df-2jG" firstAttribute="trailing" secondItem="ZuW-i3-7fa" secondAttribute="trailing" constant="20" id="xGv-bY-BwM"/>
+                            <constraint firstItem="KWc-df-2jG" firstAttribute="trailing" secondItem="p37-DQ-dxN" secondAttribute="trailing" constant="20" id="z4h-KL-NeA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KWc-df-2jG"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="HOME" id="4dU-eP-b4Z"/>
+                    <connections>
+                        <outlet property="txtInfo" destination="ZuW-i3-7fa" id="jSi-Qc-5Qf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bbS-5M-bx9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060.8695652173915" y="211.60714285714286"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_sign_off" width="50" height="50"/>
+        <image name="person.icloud.fill" width="64" height="44"/>
+    </resources>
+</document>

@@ -10,11 +10,14 @@ import Foundation
 
 extension LoginViewController {
     //MARK:- Service
-    func login(){
-        Service.sharedService.login(user: "chamo.int@gmail.com", password: "1234", successResponse: { (response) in
-            print(response)
+    func login(user:String,password:String){
+        Service.sharedService.login(user: user, password: password, successResponse: { (response) in
+            let name = response["name"] as! String
+            let lastname = response["lastname"] as! String
+            let data = ["name":name,"lastname":lastname]
+            self.performSegue(withIdentifier: "home", sender: data)
         }) { (errorMsg) in
-            print(errorMsg)
+            UIAlert.instance.alertView(tilte: "Alerta!", menssage: errorMsg, vc: self)
         }
     }
 }
